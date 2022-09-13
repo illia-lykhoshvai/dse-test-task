@@ -1,0 +1,4 @@
+../Src/misc.c:14:6:initHW	8	static
+../Src/misc.c:20:6:initRCC	8	static
+../Src/misc.c:24:6:initGPIO	8	static
+../Src/misc.c:28:6:initTIM	8	static
