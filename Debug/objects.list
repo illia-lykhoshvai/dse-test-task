@@ -1,4 +1,6 @@
 "./CMSIS/Src/system_stm32f0xx.o"
 "./Src/main.o"
 "./Src/misc.o"
+"./Src/onewire.o"
+"./Src/segm.o"
 "./Startup/startup_stm32f051r8tx.o"

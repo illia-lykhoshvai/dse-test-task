@@ -1,4 +1,6 @@
-../Src/misc.c:14:6:initHW	8	static
-../Src/misc.c:20:6:initRCC	8	static
-../Src/misc.c:24:6:initGPIO	8	static
-../Src/misc.c:28:6:initTIM	8	static
+C:/pets/dse-test-task/CMSIS/Inc/core_cm0.h:623:22:__NVIC_EnableIRQ	16	static
+../Src/misc.c:17:6:initHW	8	static
+../Src/misc.c:23:6:initRCC	8	static
+../Src/misc.c:38:6:initTIM	16	static
+../Src/misc.c:50:6:initGPIO	8	static
+../Src/misc.c:67:6:timClearIFlag	8	static
