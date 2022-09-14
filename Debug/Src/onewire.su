@@ -1,0 +1,7 @@
+../Src/onewire.c:10:5:dsCRC	32	static
+../Src/onewire.c:31:6:delayUs	16	static,ignoring_inline_asm
+../Src/onewire.c:37:6:checkPresence	16	static,ignoring_inline_asm
+../Src/onewire.c:54:6:writeByte	24	static,ignoring_inline_asm
+../Src/onewire.c:73:5:readByte	16	static,ignoring_inline_asm
+../Src/onewire.c:94:1:startDS	32	static
+../Src/onewire.c:109:1:readDS	40	static

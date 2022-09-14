@@ -12,6 +12,8 @@ void TIM17_IRQHandler(void) {
 }
 
 int main(void) {
+	for(ui8 i = 0;i < DIGITS;i++)
+		showBuffer[i] = 8;
 	initHW();
 
 	while(1) {
