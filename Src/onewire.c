@@ -106,7 +106,7 @@ PT_THREAD(startDS(struct pt* pt)) {
 	PT_END(pt);
 }
 
-PT_THREAD(readDS(struct pt* pt, ui8* returnCode, ui16* temperature)) {
+PT_THREAD(readDS(struct pt* pt, ui8* returnCode, i16* temperature)) {
 	static ui8 packet[9];
 	ui8 dsPresent, i;
 	PT_BEGIN(pt);

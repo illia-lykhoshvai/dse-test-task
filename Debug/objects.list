@@ -1,4 +1,5 @@
 "./CMSIS/Src/system_stm32f0xx.o"
+"./Src/application.o"
 "./Src/main.o"
 "./Src/misc.o"
 "./Src/onewire.o"

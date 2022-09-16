@@ -9,6 +9,7 @@
 #define MAIN_H_
 
 #include "misc.h"
+#include "string.h"
 
 typedef char i8;
 typedef unsigned char ui8;
@@ -19,5 +20,9 @@ typedef unsigned long ui32;
 
 #define DIGITS 4
 
+#define HYPHEN_SYMBOL 10
+#define POINT 0x80
+
+extern ui8 showBuffer[DIGITS];
 
 #endif /* MAIN_H_ */

@@ -5,18 +5,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/application.c \
 ../Src/main.c \
 ../Src/misc.c \
 ../Src/onewire.c \
 ../Src/segm.c 
 
 OBJS += \
+./Src/application.o \
 ./Src/main.o \
 ./Src/misc.o \
 ./Src/onewire.o \
 ./Src/segm.o 
 
 C_DEPS += \
+./Src/application.d \
 ./Src/main.d \
 ./Src/misc.d \
 ./Src/onewire.d \
@@ -30,7 +33,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/main.d ./Src/main.o ./Src/main.su ./Src/misc.d ./Src/misc.o ./Src/misc.su ./Src/onewire.d ./Src/onewire.o ./Src/onewire.su ./Src/segm.d ./Src/segm.o ./Src/segm.su
+	-$(RM) ./Src/application.d ./Src/application.o ./Src/application.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/misc.d ./Src/misc.o ./Src/misc.su ./Src/onewire.d ./Src/onewire.o ./Src/onewire.su ./Src/segm.d ./Src/segm.o ./Src/segm.su
 
 .PHONY: clean-Src
 

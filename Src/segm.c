@@ -18,7 +18,8 @@ ui8 segmentToPort[] = {
 		(segmA + segmC + segmD + segmE + segmF + segmG),			// 6
 		(segmA + segmB + segmC),				 					// 7
 		(segmA + segmB + segmC + segmD + segmE + segmF + segmG),	// 8
-		(segmA + segmB + segmC + segmD + segmF + segmG)				// 9
+		(segmA + segmB + segmC + segmD + segmF + segmG),				// 9
+		(segmG)														// HYPHEN_SYMBOL
 };
 
 void drawDigit(ui8 digit, ui8 position) {
@@ -27,9 +28,9 @@ void drawDigit(ui8 digit, ui8 position) {
 	GPIOC->BSRR = digitAll;
 
 
-	if(digit & 0x80) {
+	if(digit & POINT) {
 		GPIOB->BSRR = segmDP;
-		digit &= ~0x80;
+		digit &= ~POINT;
 	}
 	if(digit < sizeof(segmentToPort)) {
 		GPIOB->BSRR = segmentToPort[digit];

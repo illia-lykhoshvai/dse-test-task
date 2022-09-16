@@ -51,6 +51,6 @@ typedef enum w1ReturnCodeEnum {
 PT_THREAD(startDS(struct pt* pt));
 
 // protothread to read DS18 memory and check data integrity and after that - return temperature
-PT_THREAD(readDS(struct pt* pt, w1ReturnCode_t* returnCode, ui16* temperature));
+PT_THREAD(readDS(struct pt* pt, w1ReturnCode_t* returnCode, i16* temperature));
 
 #endif /* ONEWIRE_H_ */
