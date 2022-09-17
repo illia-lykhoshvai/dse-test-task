@@ -14,7 +14,7 @@
 #include "stm32f0xx.h"
 
 
-//#define PARASITE_POWER
+#define PARASITE_POWER
 
 #define REGISTER_SIZE ui32
 

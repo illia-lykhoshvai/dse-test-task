@@ -13,7 +13,7 @@ PT_THREAD(oneWireTemp(struct pt* pt, volatile i16* returnTemperature)) {
 	static ui8 dsStatus, errorsCounter;
 	PT_BEGIN(pt);
 
-	PT_INIT(pt);
+	PT_INIT(&tempPt);
 	PT_YIELD_UNTIL(pt, (readDS(&tempPt, &dsStatus, &temperature) == PT_ENDED));
 
 	if (dsStatus == correctValue) { // good data

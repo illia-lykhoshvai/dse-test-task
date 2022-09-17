@@ -3,4 +3,4 @@ C:/pets/dse-test-task/CMSIS/Inc/core_cm0.h:623:22:__NVIC_EnableIRQ	16	static
 ../Src/misc.c:23:6:initRCC	8	static
 ../Src/misc.c:38:6:initTIM	16	static
 ../Src/misc.c:50:6:initGPIO	8	static
-../Src/misc.c:67:6:timClearIFlag	8	static
+../Src/misc.c:68:6:timClearIFlag	8	static

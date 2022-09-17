@@ -9,7 +9,7 @@ static volatile ui8 ledCounter, mainTaskSemaphore, oneWireSemaphore = 1;
 static struct pt oneWirePT;
 ui8 showBuffer[DIGITS] = { 8, 8, 8, 8 };
 
-void TIM17_IRQHandler(void) {
+void TIM17_IRQHandler(void) { // 1ms int.
 #define HZ_VALUE 1000
 	timClearIFlag();
 /// LED section
@@ -24,6 +24,7 @@ void TIM17_IRQHandler(void) {
 	}
 /// 1HZ action section
 	if(++hzCounter >= HZ_VALUE) {
+		hzCounter = 0;
 		mainTaskSemaphore = 1;
 	}
 }
