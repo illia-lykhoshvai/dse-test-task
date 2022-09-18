@@ -13,7 +13,7 @@
 
 #include "onewire.h"
 
-#define ERROR_TEMP 0xFFFF
+#define ERROR_TEMP 15000 // 150.0 *C
 
 PT_THREAD(oneWireTemp(struct pt* pt, volatile i16* returnTemperature));
 

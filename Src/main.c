@@ -38,10 +38,28 @@ int main(void) {
 			mainTaskSemaphore = 0;
 
 			if (temperature < ERROR_TEMP) {
-				showBuffer[0] = (temperature / 1000) % 10;
-				showBuffer[1] = (temperature / 100) % 10 | POINT;
-				showBuffer[2] = (temperature / 10) % 10;
-				showBuffer[3] = temperature % 10;
+				if ((temperature >= 0) && (temperature < 10000)) { // (T >= 0.0) && (T < 100.0)
+					showBuffer[0] = temperature / 1000;
+					showBuffer[1] = (temperature / 100) % 10 | POINT;
+					showBuffer[2] = (temperature / 10) % 10;
+					showBuffer[3] = temperature % 10;
+				} else if ((temperature >= 10000)) { // T >= 100.0
+					showBuffer[0] = temperature / 10000;
+					showBuffer[1] = (temperature / 1000) % 10;
+					showBuffer[2] = (temperature / 100) % 10 | POINT;
+					showBuffer[3] = (temperature / 10) % 10;
+				} else { // T < 0.0
+					showBuffer[0] = HYPHEN_SYMBOL;
+					if (temperature <= (-1000)) { // T <= -10.0
+						showBuffer[1] = -(temperature / 1000);
+						showBuffer[2] = (-((temperature / 100) % 10)) | POINT;
+						showBuffer[3] = -((temperature / 10) % 10);
+					} else {  // T > -10.0
+						showBuffer[1] = (-(temperature / 100)) | POINT;
+						showBuffer[2] = -((temperature / 10) % 10);
+						showBuffer[3] = -(temperature % 10);
+					}
+				}
 			} else {
 				memset(showBuffer,HYPHEN_SYMBOL,DIGITS);
 			}
